@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tekstil Atığı | Yeniden Değer</title>
+  <meta name="description" content="Tekstil Atığı Hakkında Bilgilendirici Kaynaklar, Yeniden Değerlendirme ve İpuçları." />
+  <style>
+    :root{
+      --bg:#242031;
+      --card:#38276566;
+      --muted:#beb9ca;
+      --accent:#a58dfc;
+      --glass: rgba(131, 130, 132, 0.368);
+      --maxw:1100px;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#0e0724 0%, #160f24 100%);
+      color:#eef6f8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:36px auto;
+      padding:28px;
+    }
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo{
+      width:64px;
+      height:64px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),#8a4fff);
+      display:grid;
+      place-items:center;
+      box-shadow:0 6px 20px rgba(41, 20, 71, 0.6), inset 0 -6px 18px rgba(255, 255, 255, 0.04);
+      flex:0 0 64px;
+    }
+    .logo svg{width:36px;height:36px;}
+    .site-title{
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .site-sub{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:2px;
+    }
+
+    /* top-right info (küçük logo köşesi) */
+    .top-right{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .mini-logo{
+      width:42px;height:42px;border-radius:10px;background:var(--glass);display:grid;place-items:center;border:1px solid rgba(255,255,255,0.03);
+    }
+    .mini-logo svg{width:22px;height:22px;opacity:0.95}
+
+    /* Hero / info card */
+    .hero{
+      background:linear-gradient(180deg, rgba(40, 22, 71, 0.02), rgba(255, 255, 255, 0.01));
+      border-radius:var(--radius);
+      padding:20px;
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+      box-shadow:0 10px 30px rgba(8, 2, 23, 0.6);
+      margin-bottom:22px;
+    }
+    .hero .left{flex:1}
+    .hero h1{margin:0;font-size:20px}
+    .hero p{margin:10px 0 0;color:var(--muted)}
+    .hero .cta{
+      margin-top:12px;
+      display:inline-block;
+      background:linear-gradient(90deg,var(--accent),#5b4fff);
+      color:#240c05;
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    /* Gallery slim */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      margin-bottom:20px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      overflow:hidden;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:10px;
+      transition:transform .22s ease, box-shadow .22s ease;
+      border:1px solid rgba(27, 13, 63, 0.664);
+    }
+    .card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(12,20,30,0.5); }
+
+    .thumb{
+      width:36%;
+      min-width:150px;
+      height:90px; /* ince görsel: kısa */
+      overflow:hidden;
+      border-radius:8px;
+      flex-shrink:0;
+      background:#0c0a16;
+      display:block;
+    }
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    .card .meta{
+      flex:1;
+      padding-right:6px;
+    }
+    .card h3{margin:0;font-size:15px}
+    .card p{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+    /* footer small */
+    footer{ color:var(--muted); font-size:13px; text-align:center; margin-top:28px; padding-bottom:24px; }
+
+    /* responsive */
+    @media (max-width:800px){
+      .gallery{ grid-template-columns: 1fr; }
+      .logo{ width:52px;height:52px; }
+      .thumb{ height:84px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- Basit textile/leaf icon as logo (replace with your SVG/PNG) -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 21c6-6 9-9 18-12-2 9-6 12-18 12z" fill="#052024" opacity="0.18"/>
+            <path d="M5 10c4-4 6-6 12-7" stroke="#052024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 14c3-3 5-5 10-5" stroke="#052024" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="site-title">Yeniden Değer — Tekstil Atığı Bilgi Merkezi</div>
+          <div class="site-sub">Tekstil atığını azalt, yeniden değerlendir, ilham al ✨</div>
+        </div>
+      </div>
+
+      <div class="top-right" aria-hidden="true">
+        <div style="text-align:right">
+          <div style="font-weight:700">Yeniden Değer</div>
+          <div style="color:var(--muted);font-size:13px">Sürdürülebilir çözümler</div>
+        </div>
+        <div class="mini-logo" title="Logo">
+          <!-- mini logo -->
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#7bd389" stroke-width="1.6"/></svg>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" role="region" aria-label="Site Bilgileri">
+      <div class="left">
+        <h1>Tekstil Atığı Nedir, Neden Önemli?</h1>
+        <p>
+          Tekstil atığı; üretim artıkları, kullanılmayan stoklar, geri dönüştürülmeyen giysiler ve tekstil üretim sürecinden çıkan materyalleri kapsar.
+          Amacımız atığı azaltmak, yenilemek ve topluma/iş dünyasına sürdürülebilir çözümler sunmak.
+        </p>
+        <a class="cta" href="#gallery">Bölümlere Git</a>
+      </div>
+      <div style="width:280px; text-align:right; color:var(--muted); font-size:13px">
+        <strong>İletişim</strong><br/>
+        tekden@yeniden-deger.org<br/>
+        Kayseri, Türkiye
+      </div>
+    </section>
+
+    <!-- İnce 4 görsel alanı -->
+    <main id="gallery" aria-label="Görsel Galeri">
+      <div class="gallery">
+        <article class="card">
+          <a class="thumb" href="#" onclick="openModal(event,1)">
+            <img src="https://uyguntekstilatikyonetimi.com/_dir/urun/resimler/aa2-2020-10-16-012512-79.jpg" alt="Atık tekstil yığını">
+          </a>
+          <div class="meta">
+            <h3>Atık Miktarı ve Kaynaklar</h3>
+            <p>Küresel tekstil atığının ana kaynakları: üretim fazlası, tüketici iadesi ve kısa ömürlü moda. Azaltma stratejileri burada başlıyor.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="thumb" href="#" onclick="openModal(event,2)">
+            <img src="https://cationiselbisesi.com/wp-content/uploads/2022/04/tekstil-geridonusum.jpeg" alt="Geri dönüşümde dokuma">
+          </a>
+          <div class="meta">
+            <h3>Geri Dönüşüm Teknikleri</h3>
+            <p>Tekstil liflerinin ayrıştırılması, mekanik ve kimyasal geri dönüşüm yöntemleri ve yeni kumaş üretim süreçleri hakkında bilgilendirici özet.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="thumb" href="#" onclick="openModal(event,3)">
+            <img src="https://babacantekstil.com/images/blog/9917800206132-10-tekstil-nedir.jpg" alt="Yeniden kullanım projeleri">
+          </a>
+          <div class="meta">
+            <h3>Yaratıcı Yeniden Kullanım</h3>
+            <p>Moda tasarımcıları ve atölyeler tarafından yapılan upcycling projeleri: Eski kıyafetlerden yeni ürünler yaratma örnekleri.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="thumb" href="#" onclick="openModal(event,4)">
+            <img src="https://avatars.mds.yandex.net/i?id=73f37ca2c7f865695c57f46efc880e274c90bed0-4261963-images-thumbs&n=13" alt="Topluluk bilinci ve kampanya">
+          </a>
+          <div class="meta">
+            <h3>Topluluk & Bilinçlendirme</h3>
+            <p>Bireyler ve kurumlar için atık azaltma rehberi, bağış noktaları ve bilinçlendirme kampanya fikirleri — adım adım uygulama.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Yeniden Değer · Hazır site taslağı — içeriği özelleştir. Yapım: Sen ve iyi fikirlerin 
+    </footer>
+  </div>
+
+  <!-- Basit modal (isteğe bağlı) -->
+  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0, 0, 0, 0.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;z-index:9999" onclick="closeModal()">
+    <div style="max-width:900px;width:100%;border-radius:10px;overflow:hidden;background:#09071a;border:1px solid rgba(255, 255, 255, 0.04)" onclick="event.stopPropagation()">
+      <img id="modal-img" src="" alt="" style="width:100%;height:auto;display:block;object-fit:cover"/>
+      <div style="padding:12px;color:var(--muted);font-size:14px">Kapatmak için arka plana tıkla veya ESC tuşu.</div>
+    </div>
+  </div>
+
+  <script>
+    // yıl göster
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // modal fonksiyonları
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+
+    function openModal(e, index){
+      e.preventDefault();
+      const src = document.querySelectorAll('.thumb img')[index-1].src;
+      const alt = document.querySelectorAll('.thumb img')[index-1].alt;
+      modalImg.src = src.replace('/800/300','/1200/700'); // daha büyük isteğe göre
+      modalImg.alt = alt;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    window.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
+
+<section style="margin:32px 0; display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+  <!-- Yüzdelik görsel -->
+  <div style="flex:1; min-width:220px;">
+    <div style="background:#0b1220; border-radius:12px; padding:16px; box-shadow:0 6px 20px rgba(0,0,0,0.4)">
+      <h3 style="margin:0 0 12px;">Küresel Tekstil Atığı</h3>
+      <div style="background:#15232b; border-radius:10px; height:28px; overflow:hidden; position:relative;">
+        <div style="width:65%; height:100%; background:linear-gradient(90deg,#7bd389,#4fb3ff); display:flex; align-items:center; justify-content:flex-end; padding-right:8px; color:#052024; font-weight:700; border-radius:10px;">
+          65%
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Açıklama -->
+  <div style="flex:2; min-width:260px; color:#eef6f8;">
+    <p>
+      Küresel ölçekte üretilen tekstil ürünlerinin yaklaşık <strong>%65'i</strong> çeşitli nedenlerle atığa dönüşüyor.  
+      Bunlar; fazla üretim, kısa ömürlü moda, tüketici iadesi ve fabrikalardan çıkan kesikler gibi kaynaklardan oluşuyor.  
+      Bu oran, sürdürülebilirlik ve geri dönüşüm projeleriyle azaltılabilir.  
+    </p>
+  </div>
+</section>
+
+<section style="margin:40px 0;">
+  <h2 style="color:#eef6f8; margin-bottom:24px; text-align:center;">Tekstil Geri Dönüşümü Çalışmaları</h2>
+
+  <div class="gallery" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px;">
+    
+    <!-- 1. Çalışma -->
+    <article class="card">
+      <a class="thumb" href="#" target="_blank">
+        <img src="https://picsum.photos/seed/recycle1/400/250" alt="Mekanik geri dönüşüm">
+      </a>
+      <div class="meta">
+        <h3>Mekanik Geri Dönüşüm</h3>
+        <p>Atık tekstil lifleri ayrıştırılıp mekanik yöntemlerle yeniden iplik ve kumaş üretiminde kullanılıyor. Bu sayede doğal kaynak tasarrufu sağlanıyor.</p>
+      </div>
+    </article>
+
+    <!-- 2. Çalışma -->
+    <article class="card">
+      <a class="thumb" href="#" target="_blank">
+        <img src="https://picsum.photos/seed/recycle2/400/250" alt="Kimyasal geri dönüşüm">
+      </a>
+      <div class="meta">
+        <h3>Kimyasal Geri Dönüşüm</h3>
+        <p>Sentetik ve karışık lifler kimyasal süreçlerle ayrıştırılarak yeniden ham maddeye dönüştürülüyor. Bu yöntem tekstil atığını minimize ediyor.</p>
+      </div>
+    </article>
+
+    <!-- 3. Çalışma -->
+    <article class="card">
+      <a class="thumb" href="#" target="_blank">
+        <img src="https://picsum.photos/seed/recycle3/400/250" alt="Upcycling projeleri">
+      </a>
+      <div class="meta">
+        <h3>Upcycling Projeleri</h3>
+        <p>Kullanılmış giysiler ve kumaş parçaları tasarımcılar tarafından yenilenerek; çanta, aksesuar ve dekoratif ürünler yaratılıyor.</p>
+      </div>
+    </article>
+
+    <!-- 4. Çalışma -->
+    <article class="card">
+      <a class="thumb" href="#" target="_blank">
+        <img src="https://picsum.photos/seed/recycle4/400/250" alt="Topluluk ve eğitim çalışmaları">
+      </a>
+      <div class="meta">
+        <h3>Topluluk ve Eğitim</h3>
+        <p>Okullar ve topluluklar geri dönüşüm farkındalığı için atölyeler düzenliyor, bağış noktaları ile atık tekstil toplanıyor ve eğitici çalışmalar yapılıyor.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section style="margin:50px 0; padding:0 20px;">
+  <h2 style="color:#eef6f8; text-align:center; margin-bottom:32px;">Küresel Tekstil Atığı ve Çevresel Etkiler</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+    
+    <!-- 1. Kart -->
+    <div style="background:#0b1220; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+      <h3 style="color:#7f7bd3; margin-bottom:12px;">Yıllık Tekstil Miktarı</h3>
+      <p>Her yıl dünyamıza <strong>92 milyon ton</strong> tekstil yükleniyor. %73’ü toprağa gidiyor veya yakılıyor.</p>
+    </div>
+
+    <!-- 2. Kart -->
+    <div style="background:#0b1220; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+      <h3 style="color:#8e7bd3; margin-bottom:12px;">Geri Dönüşüm Oranları</h3>
+      <p>Küresel olarak geri dönüşüm <strong>%15</strong>’i bulmuyor. Bu atıklardan tekrar giysi yapmanın oranı <strong>%1</strong>’in altında. Sektörün kendi içindeki döngüsellik oranı ise <strong>%0,3</strong>.</p>
+    </div>
+
+    <!-- 3. Kart -->
+    <div style="background:#0b1220; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+      <h3 style="color:#a17bd3; margin-bottom:12px;">Üretim ve Kullanım Süresi</h3>
+      <p>2000’den bu yana giyim üretimi <strong>2 katına</strong> çıktı, ancak bir giysiyi kullanma süresi <strong>%36</strong> azaldı.</p>
+    </div>
+
+    <!-- 4. Kart -->
+    <div style="background:#0b1220; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+      <h3 style="color:#bd7bd3; margin-bottom:12px;">Su Tüketimi ve Kirlilik</h3>
+      <p>Dünyadaki temiz su kirliliğinin <strong>%20</strong>’si tekstilden geliyor (özellikle boyama işlemlerinden). Tek bir pamuklu tişört için <strong>2700 litre</strong> su harcanıyor.</p>
+    </div>
+
+    <!-- 5. Kart -->
+    <div style="background:#0b1220; border-radius:12px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+      <h3 style="color:#957bd3; margin-bottom:12px;">Sera Gazı ve Mikroplastikler</h3>
+      <p>Sera gazı emisyonlarının %2–8’i, okyanuslardaki mikroplastiklerin %9’u tekstil sektöründen geliyor.</p>
+    </div>
+
+  </div>
+</section>
+
+<section style="margin:50px 0; padding:0 20px;">
+  <h2 style="color:#eef6f8; text-align:center; margin-bottom:32px;">Doğru Geri Dönüşüm</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:center;">
+    
+<!-- Açıklama -->
+    <div style="flex:2 1 400px; min-width:280px; color:#eef6f8;">
+      <p>
+        Tekstil geri dönüşümü, atık kumaş ve giysilerin yeniden kullanılmasını sağlar.  
+        Küresel olarak geri dönüşüm oranı <strong>%15</strong>’i bulmuyor ve bu atıklardan tekrar giysi üretme oranı <strong>%1</strong>’in altında.  
+        Mekanik ve kimyasal yöntemlerle ayrıştırılan lifler, yeni kumaş ve ürünlerde kullanılabiliyor.  
+        Upcycling projeleri ile eski giysiler tasarım ürünlerine dönüştürülüyor ve topluluk farkındalığı artırılıyor.
+        </p>
+
+        AZALT -> YENİDEN KULLAN -> GERİ DÖNÜŞTÜR
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section style="margin:50px 0; padding:0 20px;">
+  <h2 style="color:#eef6f8; text-align:center; margin-bottom:32px;">Geri Dönüşüm Çalışmaları Ülke Örnekleri</h2>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+
+   
+
+    <!-- 1. Kart: Gana -->
+    <div style="background:#0b1220; border-radius:12px; padding:16px; box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;">
+      <img src="images/gana_recycle.jpg" alt="Gana Tekstil Geri Dönüşümü" style="width:100%; border-radius:10px; margin-bottom:12px;">
+      <h3 style="color:#7bd389; margin-bottom:8px;">Gana</h3>
+      <p>Gana, atık tekstil ürünlerini toplama ve yeniden kullanım projeleriyle ekonomiye kazandırıyor. Upcycling atölyeleri yaygın.</p>
+    </div>
+
+    <!-- 2. Kart: New York (ABD) -->
+    <div style="background:#0b1220; border-radius:12px; padding:16px; box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;">
+      <img src="images/newyork_recycle.jpg" alt="New York Tekstil Geri Dönüşümü" style="width:100%; border-radius:10px; margin-bottom:12px;">
+      <h3 style="color:#7bd389; margin-bottom:8px;">New York, ABD</h3>
+      <p>New York’ta tekstil atıkları için çeşitli bağış noktaları ve geri dönüşüm merkezleri bulunuyor. Büyük moda markaları sürdürülebilir koleksiyonlar geliştiriyor.</p>
+    </div>
+
+    <!-- 3. Kart: Fransa -->
+    <div style="background:#0b1220; border-radius:12px; padding:16px; box-shadow:0 6px 20px rgba(0,0,0,0.4); text-align:center;">
+      <img src="images/fransa_recycle.jpg" alt="Fransa Tekstil Geri Dönüşümü" style="width:100%; border-radius:10px; margin-bottom:12px;">
+      <h3 style="color:#7bd389; margin-bottom:8px;">Fransa</h3>
+      <p>Fransa, tekstil geri dönüşümünde lider ülkelerden biri. Atık toplama, yeniden kullanım ve upcycling projeleri yaygın. Moda endüstrisi çevre dostu inisiyatifler uyguluyor.</p>
+    </div>
+
+  </div>
+</section>
